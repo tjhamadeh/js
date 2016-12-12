@@ -1,18 +1,11 @@
-var x = [];
-var y = [];
-var segNum = 36;
-var segLength = 18;
-
-for (var i = 0; i < segNum; i++)
-{
-  x[i] = 0;
-  y[i] = 0;
-}
+var x = [0,0];
+var y = [0,0];
+var segLength = 100;
 
 function setup()
 {
   createCanvas(1024, 768);
-  strokeWeight(9);
+  strokeWeight(20.0);
   stroke(255, 100);
 }
 
@@ -20,10 +13,7 @@ function draw()
 {
   background(0);
   dragSegment(0, mouseX, mouseY);
-  for(var i = 0; i < x.length-1; i++)
-  {
-    dragSegment(i+1, x[i], y[i]);
-  }
+  dragSegment(1, x[0], y[0]);
 }
 
 function dragSegment(i, xin, yin)
@@ -39,7 +29,7 @@ function dragSegment(i, xin, yin)
 function segment(x, y, a)
 {
   push();
-  translate(x,y);
+  translate(x, y);
   rotate(a);
   line(0, 0, segLength, 0);
   pop();
