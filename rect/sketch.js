@@ -4,8 +4,8 @@ var posX = 100;
 var posY = 50;
 var sizeX = 50;
 var sizeY = 50;
-var canvasX = 640;
-var canvasY = 480;
+var canvasX = 800;
+var canvasY = 600;
 var dirX = true;
 var dirY = true;
 
